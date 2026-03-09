@@ -1,0 +1,82 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(236, 236, 236);
+    margin: 0;
+}
+
+.SobreMim > p::first-letter{
+    font-size: 40px;
+    color: rgb(163, 89, 176);
+}
+
+.SobreMim {
+    display: inline;
+}
+
+.Titulo {
+    text-align: center;
+    color: rgb(183, 153, 186);
+}
+
+.Projetos {
+    background-color: rgb(214, 173, 209);
+    border: 5px;
+    border-radius: 20px;
+    border-style: dotted;
+    border-color: rgb(183, 153, 186);
+    padding: 10px;
+    margin: 100px;
+}
+
+.Projeto1, .Projeto2 {
+    width: 40%;
+    height: 40%;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 100px;
+}
+
+/*.Projeto2 {
+    position: relative;
+    top: -75px;
+    left: 680px;
+}*/
+
+.Projetos:hover{
+    background-color: rgb(176, 66, 165);
+
+}
+
+.SobreMim {
+    padding: 10px;
+    margin: 50px;
+    width: 50%;
+    text-align: center;
+}
+
+.SobreMim > h3 {
+    text-align: center;
+    color: rgb(183, 153, 186);
+}
+
+.Habilidades > h3{
+    text-align: center;
+    color: rgb(183, 153, 186);
+}
+
+.listaHabilidades li:nth-child(odd) {
+    background-color: rgb(228, 175, 203);
+}
+
+.listaHabilidades li:hover{
+    background-color: cadetblue;
+    cursor: pointer;
+}
+
+.listaHabilidades{
+    text-align: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
