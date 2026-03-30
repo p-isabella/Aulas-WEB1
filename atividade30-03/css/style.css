@@ -1,0 +1,180 @@
+:root {
+    --corHeader: rgb(21, 52, 78);
+    --corFundo: rgb(244, 248, 255);
+    --corFundoBotoesLetrasClaras: rgb(255, 255, 255);
+    --corFundoBotoesLetrasEscuras: rgb(78, 75, 71);
+    --corFundoBotaoHover: rgb(66, 121, 167);
+}  
+
+.cor{
+    z-index: 10;
+    
+}
+
+.cor:hover{
+    cursor: pointer;
+}
+
+#tema:checked ~ .card {
+    --corFundo: rgb(42, 48, 58);
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: var(--corHeader);
+    color: var(--corFundoBotoesLetrasClaras)
+
+}
+
+.cabecalho > .titulo {
+    margin-left: 47%;
+}
+
+.itens {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    font-size: larger;
+    margin-right: 50px;
+    padding: 15px;
+
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+
+.hamburguer {
+    width: 50px;
+    height: 50px;
+    font-size: 2rem;
+    cursor: pointer;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    margin-top: 15px;
+    background-color: var(--corFundo);
+    display: flex;
+    align-items: center;
+
+    flex-direction: column;
+
+    height: 84.7vh;
+}
+
+.botoes {
+    gap: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.cardsInternos {
+    margin-top: 15px;
+    width: 170px;
+    height: 50px;
+    background-color: var(--corFundoBotoesLetrasClaras);
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 0px rgb(110, 109, 106);
+    display: flex;
+    justify-content: center;
+}
+
+.cardsInternos > p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rodape {
+    background-color: var(--corHeader);
+    color: aliceblue;
+
+    display: flex;
+    justify-content: center;
+}
+
+
+a {
+    color: var(--corFundoBotoesLetrasClaras);
+    text-decoration: none;
+    text-decoration-line: none;
+}
+
+
+.hamburguer {
+    font-size: 2rem;
+    cursor: pointer;
+    position: fixed;
+    top: 1rem;
+    left: 1px;
+    z-index: 2;
+}
+
+/* Animações: */
+
+.cardsInternos:hover {
+    background-color: var(--corFundoBotaoHover);
+    color: var(--corFundoBotoesLetrasClaras);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+#inicio:hover, #sobre:hover, #projetos:hover, #contato:hover, #tema:hover{
+    background-color: var(--corFundoBotaoHover);
+    color: var(--corFundoBotoesLetrasClaras);
+    cursor: pointer;
+    transition: 0.5s;
+    border-radius: 20px;
+    transform: scale(1.02);
+}
+
+#menu-toggle:checked ~ .menu {
+    left: 0;
+}
+
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: -200px;
+    width: 200px;
+    height: 100%;
+    background: var(--corHeader);
+
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    padding-top: 4rem;
+    gap: 1rem;
+    transition: left 0.3s ease;
+    padding-top: 150px;
+    text-decoration: none;
+}
+
+
+a:hover {
+    color: var(--corFundoBotaoHover);
+    font-size: large;
+}
+
+
