@@ -1,21 +1,19 @@
-const apiURL = 'https://api.tvmaze.com/search/shows?q=';
-const formulario = document.getElementById('formularioSerie');
+const URLapi = 'http://api.tvmaze.com/shows?q=';
+const Formulario = document.getElementById('formularioBusca')
 
-let resposta = formulario.querySelector('InputSerie');
-let corpoCard = document.getElementById('CorpoCards');
+Formulario.addEventListener('submit', async function (event)
+    {
+        event.preventDefault()
 
-let resposta2 = apiURL + resposta;
+        const pedido = document.getElementById('InputTexto').value;
+        const corpoCards = document.getElementsById('corpoCards');
 
-formulario.addEventListener('submit', buscaSerie());
-
-async function buscaSerie() {
-    let resposta = fetch(resposta2);
-        if (resposta.ok) {
-            resposta = resposta.json();
-            corpoCard.innerText = resposta.json();
-        } else {
-            console.log("naooo");
+        try {
+            const resposta = await fetch(URLapi + pedido);
+            const dadosResultantes = await resposta.json();
+            corpoCards.innerText = JSON.stringify(dadosResultantes);
+        } catch (error) {
+            corpoCards.innerText = 'Série não encontrada.';
         }
-    } 
-
+    });
 
