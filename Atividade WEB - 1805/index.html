@@ -3,16 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catálogo com TVmaze</title>
+    <title>Catálogo de Séries</title>
+
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <form id="formularioBusca">
-        <input type="text" id="InputTexto">
-        <button type="submit" id="btnEnviar">Buscar</button>
-    </form>
+    <div class="SectionBusca">
 
-    <div id="corpoCards"></div>
+        <h1>Catálogo de Séries</h1>
+        <h2>🎬</h2>
 
-    <script src="script.js"></script>
+        <form id="BuscaSerie">
+            <label for="nomeSerie">Digite o nome da série desejada:</label>
+            <input type="text" id="nomeSerie">
+            <button type="submit" id="btnPesquisa">Buscar</button>
+        </form>
+    </div>
+
+    <div class="ResultadoCards"></div>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
